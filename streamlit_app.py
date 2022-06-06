@@ -7,9 +7,9 @@ print('Beginning file download with urllib2...')
 
 @st.experimental_memo
 def download_data():
-  url = 'http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg'
-  filename = 'cat.jpg'
-  urllib.request.urlretrieve(url, 'cat.jpg')
+  url = 'https://files.minsa.gob.pe/s/eRqxR35ZCxrzNgr/download'
+  filename = 'data.csv'
+  urllib.request.urlretrieve(url, 'data.csv')
   return filename
 
 
