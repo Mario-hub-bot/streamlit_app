@@ -10,7 +10,7 @@ def download_data():
   url = 'http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg'
   filename = 'cat.jpg'
   urllib.request.urlretrieve(url, 'cat.jpg')
-	return filename
+  return filename
 
 
 st.write(download_data())
