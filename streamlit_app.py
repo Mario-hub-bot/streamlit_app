@@ -5,8 +5,15 @@ import urllib.request
 
 print('Beginning file download with urllib2...')
 
-url = 'http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg'
-urllib.request.urlretrieve(url, 'cat.jpg')
+@st.experimental_memo
+def download_data():
+  url = 'http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg'
+  filename = 'cat.jpg'
+  urllib.request.urlretrieve(url, 'cat.jpg')
+	return filename
+
+
+st.write(download_data())
 
 
 n = st.slider("n", 5,100, step=1)
